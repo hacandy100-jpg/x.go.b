@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'x-go.onrender.com',
+    'xgob-production.up.railway.app',
     '127.0.0.1',
 ]
 
