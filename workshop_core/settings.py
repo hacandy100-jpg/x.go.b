@@ -83,32 +83,32 @@ WSGI_APPLICATION = 'workshop_core.wsgi.application'
 
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'defaultdb',        
-        'USER': 'avnadmin',               
-        'PASSWORD': 'AVNS_NC4dIbwT1lb3Zd7-Ks_',                 
-        'HOST': 'mysql-27a43674-hacandy100-5434.f.aivencloud.com',           
-        'PORT': '16369',                 
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-    }
-}
-
-# import os
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.environ.get('DB_NAME', 'ten_db_local'),
-#         'USER': os.environ.get('DB_USER', 'root'),
-#         'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-#         'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
-#         'PORT': os.environ.get('DB_PORT', '3306'),
+#         'NAME': 'defaultdb',        
+#         'USER': 'avnadmin',               
+#         'PASSWORD': 'AVNS_NC4dIbwT1lb3Zd7-Ks_',                 
+#         'HOST': 'mysql-27a43674-hacandy100-5434.f.aivencloud.com',           
+#         'PORT': '16369',                 
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         },
 #     }
 # }
+
+import os
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('DB_NAME', 'ten_db_local'),
+        'USER': os.environ.get('DB_USER', 'root'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
+        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
